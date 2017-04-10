@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>_LAB_2_</title>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script> 
+    <script type="text/javascript"  src="script.js" ></script>
+</head>
+
+   <header>
+    </header>
+
+<body>
+    <div class="container">
+        <div class="col-md-6" id="input">
+            <div class="col-md-12"> 
+            <br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Input Trapezoid sides to trapezoid #:</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" id="addTrId" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                    </div>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Side 1</span>
+                    <input type="text" class="form-control" id="addSide1" placeholder="Left side" aria-describedby="basic-addon1" maxlength="4">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Side 2</span>
+                    <input type="text" class="form-control" id="addSide2" placeholder="Right side" aria-describedby="basic-addon1" maxlength="4">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Base 1</span>
+                    <input type="text" class="form-control" id="addBase1" placeholder="Top base" aria-describedby="basic-addon1" maxlength="4">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Base 2</span>
+                    <input type="text" class="form-control" id="addBase2" placeholder="Lower base" aria-describedby="basic-addon1" maxlength="4">
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-offset-5 col-md-6">
+                        <button type="button" class="btn btn-success" id="init">Add</button>
+                        <button type="button" id="initClear" class="btn btn-danger" id="init">Clear</button>
+                        <button type="button" class="btn btn-warning" id="rand">Random</button>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-12">
+            <br>
+            <div class="changeSize">
+                <div class="row">
+                    <div class="col-md-4"><h3>Change trapezoid</h3></div>
+                    <div class="col-md-3">
+                        <input type="text" id="AddTrC" class="form-control" placeholder="Trapezoid id">
+                        </div>
+                    <div class="col-md-1"><h3>by</h3></div>
+                    <div class="col-md-2"><input type="text" id="addTrIdCh" class="form-control" placeholder="times"></div>
+                    <div class="col-md-2"><h3>times</h3></div>
+                </div>
+                <h5 style="color:red;">!!!Input positive number to increase or negative number to decrease!!!</h5>
+                <button type="button" class="btn btn-success" id="ChangeBtn">Change</button>
+                <button type="button" class="btn btn-danger" id="ChangeClrBtn">Clear</button>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <div class="perimeter">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Get perimeter of trapezoid:</h3>
+                    </div>
+                     <div class="col-md-2">
+                         <input type="text" class="form-control" id="addTrIdP" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                     </div>
+                </div>
+                <button type="button" class="btn btn-success" id="PerAddBtn">Add</button>
+                <button type="button" class="btn btn-danger" id="PerClrBtn">Clear</button>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <div class="area">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Get area of trapezoid:</h3>
+                    </div>
+                     <div class="col-md-2">
+                         <input type="text" class="form-control" id="addTrIdS" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                     </div>
+                </div>
+                <button type="button" class="btn btn-success" id="AreaAddBtn">Add</button>
+                <button type="button" class="btn btn-danger" id="AreaClrBtn">Clear</button>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <div class="midLine">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Get MidLine of trapezoid:</h3>
+                    </div>
+                     <div class="col-md-2">
+                         <input type="text" class="form-control" id="addTrIdM" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                     </div>
+                </div>
+                <button type="button" class="btn btn-success" id="MidLineAddBtn">Add</button>
+                <button type="button" class="btn btn-danger" id="MidLineClrBtn">Clear</button>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <div class="height">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Get height of trapezoid:</h3>
+                    </div>
+                     <div class="col-md-2">
+                         <input type="text" class="form-control" id="addTrIdH" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                     </div>
+                </div>
+                
+                <button type="button" class="btn btn-success" id="HeightAddBtn">Add</button>
+                <button type="button" class="btn btn-danger" id="HeightClrBtn">Clear</button>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <div class="alike">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Find out if trapezoid #</h3>
+                    </div>
+                    <br><br>
+                     <div class="col-md-2">
+                         <input type="text" class="form-control" id="sim1" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                    </div>
+                        <div class="col-md-2">
+                         <h3>and</h3>
+                    </div>
+                        <div class="col-md-2">
+                         <input type="text" class="form-control" id="sim2" placeholder="#" aria-describedby="basic-addon1" maxlength="1">
+                    </div>
+                        <div class="col-md-3">
+                         <h3>are alike?</h3>
+                    </div>
+                     </div>
+                </div>
+                <br>
+                <button type="button" class="btn btn-success" id="SimAddBtn">Run</button>
+                <button type="button" class="btn btn-danger" id="SimClrBtn">Clear</button>
+            </div>
+        </div>
+    
+        <div class="col-md-6" id="tables">
+            <div class="col-md-12">
+                <br>
+                <h3>Result:</h3>
+                <div class="col-md-12">
+                    <div class="table">
+                        <table border="1">
+                            <tr>
+                                <th>Propetries</th>
+                                <th id="valTr1" data-value="1"><div class="btn dtn-default" id="tr1">Trapezoid 1</div></th>
+                                <th id="valTr2" data-value="2"><div class="btn dtn-default" id="tr2">Trapezoid 2</div></th>
+                                <th id="valTr3" data-value="3"><div class="btn dtn-default" id="tr3">Trapezoid 3</div></th>
+                            </tr>
+                            <tr>
+                                <th>Side 1</th>
+                                <td id="s11">0</td>
+                                <td id="s12">0</td>
+                                <td id="s13">0</td>
+                            </tr>
+                            <tr>
+                                <th>Side 2</th>
+                                <td id="s21">0</td>
+                                <td id="s22">0</td>
+                                <td id="s23">0</td>
+                            </tr>
+                            <tr>
+                                <th>Base 1</th>
+                                <td id="b11">0</td>
+                                <td id="b12">0</td>
+                                <td id="b13">0</td>
+                            </tr>
+                            <tr>
+                                <th>Base 2</th>
+                                <td id="b21">0</td>
+                                <td id="b22">0</td>
+                                <td id="b23">0</td>
+                            </tr>
+                            <tr>
+                                <th>Perimeter</th>
+                                <td id="p1">0</td>
+                                <td id="p2">0</td>
+                                <td id="p3">0</td>
+                            </tr>
+                            <tr>
+                                <th>Area</th>
+                                <td id="a1">0</td>
+                                <td id="a2">0</td>
+                                <td id="a3">0</td>
+                            </tr>
+                            <tr>
+                                <th>MidLine</th>
+                                <td id="m1">0</td>
+                                <td id="m2">0</td>
+                                <td id="m3">0</td>
+                            </tr>
+                            <tr>
+                                <th>Height</th>
+                                <td id="he1">0</td>
+                                <td id="he2">0</td>
+                                <td id="he3">0</td>
+                            </tr>
+                            <tr>
+                                <th>Similarity</th>
+                                <td id="s1">@</td>
+                                <td id="s2">@</td>
+                                <td id="s3">@</td>
+                            </tr>
+   
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+  
+    <script>
+        var side1,side2,base1,base2,trId,height,area,perimeter,midLine;
+    $('#init').click(function() {
+        $trId = document.getElementById("addTrId").value;
+        $side1 = document.getElementById("addSide1").value;
+        $side2 = document.getElementById("addSide2").value;
+        $base1 = document.getElementById("addBase1").value;
+        $base2 = document.getElementById("addBase2").value;
+        if($side1 != 0 && $side2 != 0 && $base1 !=0 && $base2 !=0)
+            {
+                if( $trId == 1){
+                    document.getElementById("s11").innerHTML = $side1;
+                    document.getElementById("s21").innerHTML = $side2;
+                    document.getElementById("b11").innerHTML = $base1;
+                    document.getElementById("b21").innerHTML = $base2;
+                }
+                else if( $trId == 2) {
+                    document.getElementById("s12").innerHTML = $side1;
+                    document.getElementById("s22").innerHTML = $side2;
+                    document.getElementById("b12").innerHTML = $base1;
+                    document.getElementById("b22").innerHTML = $base2;
+                }
+                else if( $trId == 3) {
+                    document.getElementById("s13").innerHTML = $side1;
+                    document.getElementById("s23").innerHTML = $side2;
+                    document.getElementById("b13").innerHTML = $base1;
+                    document.getElementById("b23").innerHTML = $base2;
+                }
+                
+            }
+        else {alert("Value can NOT be 0!");}
+    });
+    $('#initClear').click(function() {
+        clearInit();
+    });
+
+    $('#rand').click(function(){
+
+        document.getElementById("s11").innerHTML = rand();
+        document.getElementById("s21").innerHTML = rand();
+        document.getElementById("b11").innerHTML = rand();
+        document.getElementById("b21").innerHTML = rand();
+
+        document.getElementById("s12").innerHTML = rand();
+        document.getElementById("s22").innerHTML = rand();
+        document.getElementById("b12").innerHTML = rand();
+        document.getElementById("b22").innerHTML = rand();
+
+        document.getElementById("s13").innerHTML = rand();
+        document.getElementById("s23").innerHTML = rand();
+        document.getElementById("b13").innerHTML = rand();
+        document.getElementById("b23").innerHTML = rand();
+        
+    })
+        
+    $('#HeightAddBtn').click(function(){
+        $trId = document.getElementById("addTrIdH").value;
+        $side1 = getVal($trId)[0];
+        $side2 = getVal($trId)[1];
+        $base1 = getVal($trId)[2];
+        $base2 = getVal($trId)[3];
+        $height = height($side1,$side2,$base1,$base2);
+        if($trId == 1){
+            document.getElementById("he1").innerHTML = $height;
+        }
+        else if($trId == 2){
+            document.getElementById("he2").innerHTML = $height;
+        }
+        else if($trId == 3){
+            document.getElementById("he3").innerHTML = $height;
+        }
+    });
+		
+	$('#HeightClrBtn').click(function(){
+        clearheight();
+    })
+	
+    $('#PerAddBtn').click(function(){
+        $trId = document.getElementById("addTrIdP").value;
+        $side1 = getVal($trId)[0];
+        $side2 = getVal($trId)[1];
+        $base1 = getVal($trId)[2];
+        $base2 = getVal($trId)[3];
+        $perimeter = perimeter($side1,$side2,$base1,$base2);
+        if($trId == 1){
+            document.getElementById("p1").innerHTML = $perimeter;
+        }
+        else if($trId == 2){
+            document.getElementById("p2").innerHTML = $perimeter;
+        }
+        else if($trId == 3){
+            document.getElementById("p3").innerHTML = $perimeter;
+        }
+    });
+		
+	$('#PerClrBtn').click(function(){
+        clearPerimeter();
+    })
+	
+    $('#AreaAddBtn').click(function(){
+        $trId = document.getElementById("addTrIdS").value;
+        $side1 = getVal($trId)[0];
+        $side2 = getVal($trId)[1];
+        $base1 = getVal($trId)[2];
+        $base2 = getVal($trId)[3];
+        $area = area($side1,$side2,$base1,$base2);
+        if($trId == 1){
+            document.getElementById("a1").innerHTML = $area;
+        }
+        else if($trId == 2){
+            document.getElementById("a2").innerHTML = $area;
+        }
+        else if($trId == 3){
+            document.getElementById("a3").innerHTML = $area;
+        }
+    });
+		
+	$('#AreaClrBtn').click(function(){
+        clearArea();
+    })
+	
+    $('#MidLineAddBtn').click(function(){
+        $trId = document.getElementById("addTrIdM").value;
+        $base1 = getVal($trId)[2];
+        $base2 = getVal($trId)[3];
+        $midLine = midLine($base1,$base2);
+        if($trId == 1){
+            document.getElementById("m1").innerHTML = $midLine;
+        }
+        else if($trId == 2){
+            document.getElementById("m2").innerHTML = $midLine;
+        }
+        else if($trId == 3){
+            document.getElementById("m3").innerHTML = $midLine;
+        }
+    });
+		
+	$('#MidLineClrBtn').click(function() {
+        clearMidLine();
+    });
+	
+    $('#SimAddBtn').click(function(){
+        var similar,coefId1,coefId2;
+        $coefId1 = document.getElementById("sim1").value;
+        $coefId2 = document.getElementById("sim2").value;
+        $similar = coef($coefId1,$coefId2);
+        /*alert($similar);*/
+        if($similar == 1){
+            simPrint($coefId1,$coefId2); 
+            alert("alike");       
+        }
+        else if ($similar == 0) {
+            simPrintMinus($coefId1,$coefId2);
+            alert("not alike");
+        }
+    });
+		
+	$('#SimClrBtn').click(function() {
+        clearSimilarity();
+    });
+		
+    $('#ChangeBtn').click(function(){
+    	var times;
+    	$trId = document.getElementById("AddTrC").value;
+    	$times = document.getElementById("addTrIdCh").value;
+        changeSize($trId,$times);
+    }); 
+		
+	$('#ChangeClrBtn').click(function() {
+        clearChange();
+    });
+	$('#tr1').click(function() {
+        $trId=1;
+        getTrId($trId);	
+	});
+        $('#tr2').click(function() {
+        $trId=2;
+		getTrId($trId);
+	});
+        $('#tr3').click(function() {
+        $trId=3;
+		getTrId($trId);
+	});
+    </script>
+</html>

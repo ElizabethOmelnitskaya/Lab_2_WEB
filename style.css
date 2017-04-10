@@ -1,0 +1,20 @@
+.table table {
+        width: 100%;
+    }
+
+.table table tr,td,th {
+        padding: 30px 10px;
+        height: 80px;
+    }
+
+.table table th {
+   color: blue;
+}
+
+.table table td {
+  text-align: center;
+}
+
+#addTrId {
+        padding-left: 25px
+    }
